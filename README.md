@@ -7,9 +7,10 @@ Code free of any use, even commercial - Benstitou Sofiane
 # SOON
 vanille : vanilla lune functions syntaxe 
 
-lunatique : Math librairy made from scratch 
+lunatique : Math librairy made from scratch (for May : x power y operation and matrix operations), laine avaible in preview !
 
 maniaque : TUI framework (using ncurses)
+
 
 2 Developpment branch :
 - **stable** 😀 : stable version of lune
