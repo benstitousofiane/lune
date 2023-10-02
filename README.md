@@ -5,4 +5,4 @@ C framework to easily create semi-graphic or mathematical programs
 
 ➡️ maniaque : a from scratch math lib 🔢✨.
 
-➡️ estampe : the grapic lib for lune 📜📈.
+➡️ estampe : the semi-graphic lib for lune 📜📈.
