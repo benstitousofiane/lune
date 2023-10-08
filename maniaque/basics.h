@@ -41,6 +41,23 @@ float maniaque_absolute(float x){
     return x;
 }
 
+unsigned long long maniaque_factorial(int n){ //limited to the 20th factorial
+    if (n < 0 || n > 20){
+        printf("Maniaque Factorial : Can not go smaller than 0 and outer then 20!\n");
+        return 0;
+    }
+
+    if (n == 0){
+        return 1;
+    }
+    
+    unsigned long long result = 1;
+    for (int i = 1; i < n+1; i++){
+        result *= i;
+    }
+    return result;
+}
+
 
 float maniaque_powerInt(float x, int n){
     float x_powerer = x;
@@ -79,3 +96,27 @@ float maniaque_powerFracInt(float x, int n, int m){ //calculate x^(n/m), source:
 }
 
 
+float maniaque_square(float x){
+    return maniaque_powerInt(x,2);
+}
+
+float maniaque_cube(float x){
+    return maniaque_powerInt(x,3);
+}
+
+
+float maniaque_sqrt(float x){
+    if (x < 0){
+        printf("Maniaque Sqrt : not real, %fi (can not use)\n", maniaque_sqrt(-x));
+        return 0;
+    }
+    return maniaque_powerFracInt(x,1,2);
+}
+
+float maniaque_cuberoot(float x){
+    return maniaque_powerFracInt(x,1,3);
+}
+
+float maniaque_nthroot(float x, int n){
+    return maniaque_powerFracInt(x,1,n);
+}
