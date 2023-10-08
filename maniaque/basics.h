@@ -9,7 +9,7 @@ float maniaque_identity(float x){
 }
 
 
-float manique_sum(float x, float y){
+float maniaque_sum(float x, float y){
     return x+y;
 }
 
@@ -81,16 +81,24 @@ float maniaque_powerInt(float x, int n){
 }
 
 float maniaque_powerFracInt(float x, int n, int m){ //calculate x^(n/m), source: https://www.youtube.com/watch?v=Z_BDJaveZNs
+    if (x < 0 && maniaque_absolute(n) < maniaque_absolute(m)){
+        printf("Maniaque powerFracInt : not real number.\n");
+        return 0;
+    }
+    
     float result = 4; // u_0 = 4
     if (n < 0 && m < 0){ // Simplify the frac sign
         n = maniaque_absolute(n);
+        m = maniaque_absolute(m);
+    } else if (n < 0 || m < 0){
+        n = -maniaque_absolute(n);
         m = maniaque_absolute(m);
     }
 
     float y = maniaque_powerInt(result, m) - x; //result^m = x <=> result^m - x = 0
     float yp = m*maniaque_powerInt(result, m-1); //derivative of y
 
-    for (int i = 0; i < 10; i++){//calculate x^(1/m) with Newton-Raphson method
+    for (int i = 0; i < 100; i++){//calculate x^(1/m) with Newton-Raphson method
         result = result - y/yp;
         y = maniaque_powerInt(result, m) - x;
         yp = m*maniaque_powerInt(result, m-1);
