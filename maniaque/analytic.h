@@ -27,11 +27,11 @@ float maniaque_lnWC(float x, int n){ //using Halley-Newton method : https://en.w
     return result;
 }
 
-float maniaque_ln(float x){ //Do not use fraction ! -> for it use maniaque_powerFracInt
+float maniaque_ln(float x){
     return maniaque_lnWC(x, 100);
 }
 
-float maniaque_powerPositiveNotFrac(float x, float y){
+float maniaque_powerPositiveNotFrac(float x, float y){ //Do not use fraction ! -> for it use maniaque_powerFracInt
     if (x < 0){
         printf("Maniaque powerNatural : can't decide the value :(\n");
         return 0;
