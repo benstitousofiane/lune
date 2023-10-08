@@ -22,5 +22,6 @@ C framework to easily create semi-graphic or mathematical programs
 - sqrt : return the square root of an number
 - cuberoot : return the cube root of an number
 - nthroot : return the n th root of an number
+- GaussSum : sum from 1 to n
 
 ➡️ estampe : the semi-graphic lib for lune 📜📈.
