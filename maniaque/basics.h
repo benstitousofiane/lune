@@ -41,9 +41,9 @@ float maniaque_absolute(float x){
     return x;
 }
 
-unsigned long long maniaque_factorial(int n){ //limited to the 20th factorial
-    if (n < 0 || n > 20){
-        printf("Maniaque Factorial : Can not go smaller than 0 and outer then 20!\n");
+long double maniaque_factorial(int n){ //inacurate after 20
+    if (n < 0){
+        printf("Maniaque Factorial : Can not go smaller than 0.\n");
         return 0;
     }
 
@@ -51,11 +51,15 @@ unsigned long long maniaque_factorial(int n){ //limited to the 20th factorial
         return 1;
     }
     
-    unsigned long long result = 1;
+    long double result = 1;
     for (int i = 1; i < n+1; i++){
         result *= i;
     }
     return result;
+}
+
+long double maniaque_GaussSum(unsigned long long n){
+    return (float)(n*(n+1)/2);
 }
 
 
