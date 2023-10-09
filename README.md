@@ -23,5 +23,8 @@ C framework to easily create semi-graphic or mathematical programs
 - cuberoot : return the cube root of an number
 - nthroot : return the n th root of an number
 - GaussSum : sum from 1 to n
+- sin : return the sinus of an number (rad)
+- cos : return the cos of an number (rad)
+- tan : return the tan of an number (rad)
 
 ➡️ estampe : the semi-graphic lib for lune 📜📈.
