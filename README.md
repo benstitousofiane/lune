@@ -5,7 +5,9 @@ C framework to easily create semi-graphic or mathematical programs
 
 ➡️ maniaque : a from scratch math lib 🔢✨.
 
-## In basics :
+➡️ estampe : the semi-graphic lib for lune 📜📈.
+
+## In basics (maniaque_...) :
 - identity : return the number itself
 - sum : sum two numbers
 - minus : substract two numbers
@@ -27,4 +29,3 @@ C framework to easily create semi-graphic or mathematical programs
 - cos : return the cos of an number (rad)
 - tan : return the tan of an number (rad)
 
-➡️ estampe : the semi-graphic lib for lune 📜📈.
